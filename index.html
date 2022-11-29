@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  
+  <!-- Make it compatible to mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css"> 
+  <title>Semantic Analyser</title>
+</head>
+<body>
+  <nav class="navbar">
+    <span class="navbar-toggle" id="js-navbar-toggle">
+            <i class="fas fa-bars"></i>
+        </span>
+    <a href="/" class="logo" style="font-weight:bolder ;font-size: xx-large;">Home</a>
+    <ul class="main-nav" id="js-menu" style="align-items:center;position: relative;right: 200px;">
+      <li>
+        <a href="#cover" class="nav-links" style="font-weight:bolder ;font-size: xx-large;">Comments Analyser</a>
+      </li>
+      <li>
+        <a href="#About" class="nav-links" style="font-weight:bolder ;font-size: xx-large;">About</a>
+      </li>
+      <li>
+        <a href="#contact" class="nav-links" style="font-weight:bolder ;font-size: xx-large;">Contact</a>
+      </li>
+    </ul>
+  </nav>
+  <script>
+    let mainNav = document.getElementById("js-menu");
+    let navBarToggle = document.getElementById("js-navbar-toggle");
+    
+    navBarToggle.addEventListener("click", function() {
+      mainNav.classList.toggle("active");
+    });
+    
+  </script>
+  <div class="image-1" style="opacity: 0.2;">
+    <img src="sentiment.jpg" alt="Word Cloud" width="1500px" height="700px">
+  </div>
+ <div id="cover" style="width: 1000px;">
+  <form action=""method="post">
+    <div class="tb">
+      <div class="td">
+        <input type="text" name="comment" placeholder="enter the comment" required="required" style="width: 200%;"/><br>
+      </div>
+      <div class="td" id="s-cover">
+        <button type="submit">
+          <div id="s-circle"></div>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </form>
+ </div>
+ <img src="pos.png" style="padding-left: 650px;">
+ <div id="About"> 
+  <h1 style="text-align:center; padding-top: 50px; text-decoration: underline;">Dataset</h1>
+    <div id="content">
+        <div class="card">
+            <div class="imgDiv" style="margin-left: 100px;">
+              <img src="distribution.png" alt="Distribution of Dataset">
+            </div>
+            <div class="text">
+              <p style="font-weight: bolder;font-size:x-large;margin-right: 100px;">Distribution of Positive and Negative Reviews in the Dataset</p>
+            </div>
+        </div>
+    </div>
+    <div id="content" >
+      <div class="card">
+          <div class="text">
+            <p style="font-weight: bolder;font-size:x-large;margin-left: 150px;">Accuracy of the Classification Model</p>
+          </div>
+          <div class="imgDiv" style="padding-right: 50px;">
+            <img src="accuracy1.png" alt="Accuracy of the Model" width="700px" height="225px">
+          </div>
+      </div>
+    </div>
+    <div id="content"style="margin-top:50px;">
+      <div class="card">
+          <div class="imgDiv" style="margin-left: 100px;">
+            <img src="heatmap.png" alt="Distribution of Dataset">
+          </div>
+          <div class="text">
+            <p style="font-weight: bolder;font-size:x-large;margin-right: 100px;">Confusion Matrix of predicted and actual labels</p>
+          </div>
+      </div>
+    </div>
+    <div id="content" >
+      <div class="card">
+          <div class="text">
+            <p style="font-weight: bolder;font-size:x-large;margin-left: 150px;">Polarity distribution of the reviews</p>
+          </div>
+          <div class="imgDiv" style="padding-right: 50px;">
+            <img src="polarity.png" alt="Accuracy of the Model" width="700px" height="255px">
+          </div>
+      </div>
+    </div>    
+ </div>
+ </div>
+<div id="empty" style="margin-top: 50px;">
+  <p style="width: 100%;">-</p>
+</div>
+
+ 
+
+</body>
+</html>
